@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Existing Strings -->
+    <string name="app_name">Terra</string>
+    <string name="back_button_description">Kembali</string>
+    <string name="avatar_description">Avatar</string>
+    <string name="default_user_name">Muhammad Lil Uzi Vert</string>
+    <string name="login_description">
+        Rincian data Anda adalah informasi dasar yang dibutuhkan aplikasi untuk menyediakan informasi yang relevan.
+    </string>
+    <string name="username_hint">Nama Pengguna</string>
+    <string name="password_hint">Password</string>
+    <string name="register_button">Buat Akun</string>
+    <string name="login_button">Lanjut</string>
+
+    <!-- Updated/Create Account Specific Strings -->
+    <string name="full_name_title">Nama Lengkap</string>
+    <string name="full_name_hint">Nama Lengkap</string>
+    <string name="create_account_description">
+        Rincian data Anda adalah informasi dasar yang dibutuhkan aplikasi untuk menyediakan informasi yang relevan.
+    </string>
+
+    <!-- Input Field Hints -->
+    <string name="date_of_birth_hint">Tanggal Lahir</string>
+    <string name="email_hint">Email</string>
+
+    <!-- Gender Selection -->
+    <string name="gender_title">Jenis Kelamin</string>
+    <string name="male_option">Laki - Laki</string>
+    <string name="female_option">Perempuan</string>
+
+    <!-- Submit Button -->
+    <string name="submit_button">Lanjut</string>
+
+    <!-- Profile Screen -->
+    <string name="profile_header">Profile</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="badge">Badge</string>
+    <string name="add_photo_description">Add photo</string>
+    <string name="username">Ahmad Uzi Santoso</string>
+    <string name="user_handle">muhammad.uzil86</string>
+
+    <!-- Bottom Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_profile">Profile</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_notifications">Notifications</string>
+
+    <!-- General -->
+    <string name="error_generic">Something went wrong. Please try again.</string>
+    <string name="loading">Loading...</string>
+
+    <!-- Teks Tampilan -->
+    <string name="profile_fullname">Ahmad Uzi Santoso</string>
+    <string name="profile_username">muhammad.uzi66</string>
+    <string name="edit_fullname">Edit Name</string>
+    <string name="edit_username">Edit Username</string>
+    <string name="change_password">Change Password</string>
+    <string name="profile_picture_desc">Profile Picture</string>
+
+    <!-- Menu Bottom Navigation -->
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="settings">Settings</string>
+
+    <string name="badge_image">Badge Image</string>
+
+    <string name="icon_toko">Icon Toko</string>
+
+    <string name="text_link_create_account">Apakah belum memiliki akun? <b>Daftar</b></string>
+
+    <string name="location_text_1"><b>Pestisida Karya Utama</b>\nJl. Wadibo Utama, Kecamatan Odi Bobo, Kabupaten Cba, No. 21</string>
+
+    <string name="location_text_2"><b>Luvian Organik Pestisida</b>\nJl. Jendral Sudirman, Kecamatan Sudir, Kabupaten Siman, No. 01</string>
+</resources>

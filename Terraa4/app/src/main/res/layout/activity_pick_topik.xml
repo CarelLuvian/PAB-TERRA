@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_marginTop="32dp">
+
+    <!-- Header Container with Text and Button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+
+        <!-- Header Text -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/inter_medium"
+            android:gravity="center_vertical"
+            android:text="Pilih 3 Topik Untuk Jadi Rekomendasi Kamu!"
+            android:textColor="#2A4929"
+            android:textSize="32sp" />
+
+        <!-- Button "Lanjut" -->
+    </LinearLayout>
+
+    <!-- RecyclerView for Topics -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTopics"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:padding="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"
+        android:scrollbars="vertical" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#294920"
+        android:drawableEnd="@drawable/ic_right_arrow"
+        android:enabled="false"
+        android:fontFamily="@font/inter_medium"
+        android:text="Lanjut"
+        android:textColor="@android:color/white" />
+</LinearLayout>

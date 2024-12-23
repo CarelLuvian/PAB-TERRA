@@ -1,0 +1,42 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:background="@drawable/input_background"
+    android:layout_margin="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/namaToko"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nama Toko"
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/alamatToko"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Alamat Toko"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:textColor="@android:color/black"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iconToko"
+        android:layout_width="46dp"
+        android:layout_height="49dp"
+        android:layout_gravity="center"
+        android:contentDescription="@string/icon_toko" />
+</LinearLayout>

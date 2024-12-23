@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E5E2D2"
+    android:id="@+id/profile"
+    tools:context=".ProfileActivity">
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/tvProfileHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Profile"
+        android:textSize="26sp"
+        android:fontFamily="@font/sf_pro_display_bold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="18dp" />
+
+    <!-- Tambahkan ScrollView -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/tvProfileHeader"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Background Image -->
+            <ImageView
+                android:id="@+id/imgBackground"
+                android:layout_width="400dp"
+                android:layout_height="411dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/background_profil"
+                android:scaleType="centerCrop"
+                android:src="@drawable/background2_image" />
+
+            <!-- Profile Box -->
+            <LinearLayout
+                android:id="@+id/profileBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/input_border2"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Avatar and User Info -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center_vertical"
+                    android:orientation="horizontal">
+
+                    <!-- Avatar Image -->
+                    <ImageView
+                        android:id="@+id/imgAvatar"
+                        android:layout_width="46dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/background_avatarimg"
+                        android:contentDescription="User Avatar"
+                        android:src="@drawable/avatar" />
+
+                    <!-- User Name and User Handle -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:orientation="vertical">
+
+                        <!-- User Name -->
+                        <TextView
+                            android:id="@+id/tvFullName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ahmad Uzi Santoso"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/sf_pro_display_medium"
+                            android:textSize="20sp" />
+
+                        <!-- User Handle -->
+                        <TextView
+                            android:id="@+id/tvUserName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="muhammad.uzi86"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:textColor="#000000"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Buttons -->
+                <Button
+                    android:id="@+id/btnEditProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="2dp"
+                    android:backgroundTint="#CAD5B5"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:text="Edit Profile"
+                    android:textColor="@color/black" />
+
+                <Button
+                    android:id="@+id/btnBadge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="2dp"
+                    android:backgroundTint="#CAD5B5"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:text="Badge"
+                    android:textColor="@color/black" />
+
+                <Button
+                    android:id="@+id/btnKeluar"
+                    android:layout_width="165dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="14dp"
+                    android:backgroundTint="#294825"
+                    app:cornerRadius="8dp"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:text="Log Out"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/bottomnavigationview"
+        android:background="#FFFFFF"
+        app:itemIconTint="#4A7C59"
+        app:itemTextColor="#4A7C59"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

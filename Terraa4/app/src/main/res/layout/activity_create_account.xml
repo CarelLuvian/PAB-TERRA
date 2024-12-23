@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Back Button -->
+
+        <!-- Avatar -->
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="52dp"
+            android:layout_height="37dp"
+            android:layout_gravity="start"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="Back Button"
+            android:src="@drawable/ic_back" />
+
+        <ImageView
+            android:id="@+id/avatar_icon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/avatar"
+            android:contentDescription="Avatar Icon"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Daftar"
+            android:fontFamily="@font/sf_pro_display_bold"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:id="@+id/subtitle_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rincian data Anda adalah informasi dasar yang dibutuhkan aplikasi untuk menyediakan informasi yang relevan."
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"
+            android:paddingHorizontal="16dp" />
+
+        <!-- Full Name Input -->
+        <EditText
+            android:id="@+id/full_name_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama Lengkap"
+            android:background="@drawable/input_backgroundsignin"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Username Input -->
+        <EditText
+            android:id="@+id/username_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama Pengguna"
+            android:background="@drawable/input_backgroundsignin"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Date of Birth Input -->
+        <TextView
+            android:id="@+id/date_of_birth_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Pilih Tanggal Lahir"
+            android:background="@drawable/input_backgroundsignin"
+            android:padding="12dp"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp"
+            android:textColor="#000000" />
+
+
+        <!-- Gender Options -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Jenis Kelamin"
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <RadioGroup
+            android:id="@+id/gender_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <RadioButton
+                android:id="@+id/male_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Laki - Laki"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:textColor="#000000"
+                android:buttonTint="#FFA500" />
+
+            <RadioButton
+                android:id="@+id/female_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Perempuan"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:textColor="#000000"
+                android:buttonTint="#FFA500" />
+        </RadioGroup>
+
+        <!-- Email Input -->
+        <EditText
+            android:id="@+id/email_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:background="@drawable/input_backgroundsignin"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Password Input -->
+        <EditText
+            android:id="@+id/password_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:background="@drawable/input_backgroundsignin"
+            android:padding="12dp"
+            android:inputType="textPassword"
+            android:layout_marginBottom="32dp" />
+
+        <!-- Continue Button -->
+        <Button
+            android:id="@+id/continue_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="32dp"
+            android:text="Lanjut"
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#52644A"
+            android:padding="12dp"
+            app:cornerRadius="8dp"/>
+    </LinearLayout>
+</ScrollView>

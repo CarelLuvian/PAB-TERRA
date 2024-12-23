@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E5E2D2"
+    tools:context=".EditProfileActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Header Text -->
+        <TextView
+            android:id="@+id/tvProfileHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Profile"
+            android:textSize="26sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/sf_pro_display_bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="18dp" />
+
+        <!-- Back Button -->
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_back"
+            android:contentDescription="@string/back_button_description"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp" />
+
+        <!-- Background Image -->
+        <ImageView
+            android:id="@+id/imgBackground"
+            android:layout_width="401dp"
+            android:layout_height="257dp"
+            android:background="@drawable/background_profil"
+            android:scaleType="centerCrop"
+            android:src="@drawable/background2_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvProfileHeader" />
+
+        <!-- LinearLayout (Profile Box) -->
+        <LinearLayout
+            android:id="@+id/profileBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/input_border2"
+            android:orientation="vertical"
+            android:padding="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgBackground">
+
+            <!-- Gambar Profil -->
+            <ImageView
+                android:id="@+id/profile_picture"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/background_avatarimg"
+                android:contentDescription="@string/profile_picture_desc"
+                android:src="@drawable/avatar" />
+
+            <!-- Nama Lengkap -->
+            <TextView
+                android:id="@+id/profile_fullname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="8dp"
+                android:text="Ahmad Uzi Santoso"
+                android:textSize="18sp"
+                android:fontFamily="@font/sf_pro_display_medium" />
+
+            <!-- Username -->
+            <TextView
+                android:id="@+id/profile_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:text="muhammad.uzi86"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <!-- Edit View Nama Lengkap -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/input_background"
+                android:layout_marginBottom="8dp">
+
+                <EditText
+                    android:id="@+id/edit_fullname"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:backgroundTint="#CAD5B5"
+                    android:hint="Muhammad Lil Uzi Vert"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:enabled="false"
+                    android:textColorHint="@color/black"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:id="@+id/edit_name_icon"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/ic_edit"
+                    android:layout_gravity="center"
+                    android:contentDescription="Edit Name" />
+            </LinearLayout>
+
+            <!-- Edit View Username -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/input_background"
+                android:layout_marginBottom="8dp">
+
+                <EditText
+                    android:id="@+id/edit_username"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#CAD5B5"
+                    android:gravity="center_horizontal"
+                    android:hint="muhammad.uzi66"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:enabled="false"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black" />
+
+                <ImageView
+                    android:id="@+id/edit_username_icon"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="Edit Username"
+                    android:src="@drawable/ic_edit" />
+            </LinearLayout>
+
+            <!-- Edit View Password -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/input_background"
+                android:layout_marginBottom="8dp">
+
+                <EditText
+                    android:id="@+id/edit_password"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:hint="Ubah Password"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:backgroundTint="#CAD5B5"
+                    android:enabled="false"
+                    android:textColorHint="@color/black"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:id="@+id/edit_password_icon"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/ic_edit"
+                    android:layout_gravity="center"
+                    android:contentDescription="Edit Password" />
+            </LinearLayout>
+
+            <!-- Button Ubah Avatar -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:orientation="horizontal"
+                android:background="@drawable/input_background"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/UbahAvatar"
+                    android:layout_width="280dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="#CAD5B5"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:gravity="center"
+                    android:hint="Ubah Avatar"
+                    android:textColorHint="@color/black"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/ubah_avatar"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/ic_edit"
+                    android:layout_gravity="center"
+                    android:contentDescription="Edit Password" />
+            </LinearLayout>
+
+            <!-- Button Save Changes -->
+            <Button
+                android:id="@+id/btnSaveChanges"
+                android:layout_width="168dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#84927B"
+                android:text="Simpan Perubahan"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:padding="12dp" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E5E2D2"
+    tools:context=".AvatarSelectionActivity">
+
+    <!-- Back Button -->
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="Back Button"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Header Title -->
+    <TextView
+        android:id="@+id/tvAvatarHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="Avatar"
+        android:textColor="#000000"
+        android:textSize="26sp"
+        android:fontFamily="@font/sf_pro_display_bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Avatar List Container -->
+    <LinearLayout
+        android:id="@+id/avatarListContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/input_border2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAvatarHeader"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+        <!-- RecyclerView for Avatars -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAvatars"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:padding="8dp" />
+
+        <!-- Button Tambah Avatarmu Sendiri -->
+        <Button
+            android:id="@+id/btnAddAvatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#84927B"
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:text="Tambah Avatarmu Sendiri"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:padding="12dp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

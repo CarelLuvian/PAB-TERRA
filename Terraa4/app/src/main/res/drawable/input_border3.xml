@@ -1,0 +1,12 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#A1FF87"/> <!-- Warna latar belakang input -->
+    <stroke
+        android:width="2dp"
+        android:color="#000000" /> <!-- Warna garis tepi lebih halus -->
+    <corners android:radius="8dp" /> <!-- Radius sudut input -->
+    <padding
+        android:left="12dp"
+        android:top="12dp"
+        android:right="12dp"
+        android:bottom="12dp" /> <!-- Padding input -->
+</shape>

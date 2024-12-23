@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.Terra" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Gaya tombol secara global -->
+
+    </style>
+
+
+    <style name="Theme.Terra" parent="Base.Theme.Terra">
+        <!-- Tema aplikasi Anda -->
+    </style>
+
+    <style name="CustomRoundedCorners" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item> <!-- Ubah sesuai kebutuhan -->
+    </style>
+
+</resources>

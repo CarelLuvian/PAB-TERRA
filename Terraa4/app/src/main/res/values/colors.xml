@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Warna untuk item yang dipilih -->
+    <color name="selected_background">#A5D6A7</color> <!-- Hijau pastel -->
+    <color name="unselected_background">#E0E0E0</color> <!-- Abu-abu lembut -->
+
+
+</resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Ketika RadioButton terpilih -->
+    <item android:state_checked="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#117AF6" /> <!-- Warna background ketika dipilih -->
+            <stroke
+                android:width="2dp"
+                android:color="#FFFFFF" /> <!-- Outline warna hijau -->
+            <corners android:radius="10dp" /> <!-- Rounded corners -->
+        </shape>
+    </item>
+
+    <!-- Ketika RadioButton tidak terpilih -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#117AF6" /> <!-- Background default -->
+            <stroke
+                android:width="2dp"
+                android:color="#FFFFFF" /> <!-- Outline warna abu-abu -->
+            <corners android:radius="10dp" /> <!-- Rounded corners -->
+        </shape>
+    </item>
+</selector>

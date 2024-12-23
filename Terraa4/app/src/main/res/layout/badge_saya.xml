@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E5E2D2"
+    tools:context=".BadgeActivity">
+
+    <!-- Header Text -->
+    <TextView
+        android:id="@+id/tvBadgeHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Badge Saya"
+        android:textSize="26sp"
+        android:fontFamily="@font/sf_pro_display_bold"
+        android:textColor="#000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="18dp" />
+
+    <!-- Back Button -->
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_back"
+        android:contentDescription="Back Button"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp" />
+
+    <!-- Header Image -->
+    <ImageView
+        android:id="@+id/header_image"
+        android:layout_width="445dp"
+        android:layout_height="256dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/background_profil"
+        android:src="@drawable/background2_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvBadgeHeader" />
+
+    <!-- Scrollable Badge List Container -->
+    <ScrollView
+        android:id="@+id/scrollViewBadges"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_image"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:id="@+id/badgeList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/input_border2"
+            android:padding="16dp">
+
+            <!-- Collected Badge Title -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Collected Badge"
+                android:textSize="24sp" />
+
+            <!-- RecyclerView for Badges -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvBadges"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:padding="8dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

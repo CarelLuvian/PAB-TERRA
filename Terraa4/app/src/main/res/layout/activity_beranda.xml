@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E5E2D2"
+    android:orientation="vertical"
+    tools:context=".BerandaActivity">
+
+    <!-- Header Title -->
+    <TextView
+        android:id="@+id/header_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/sf_pro_display_bold"
+        android:text="Beranda"
+        android:textColor="#000000"
+        android:textSize="26sp"
+        android:layout_gravity="center_horizontal" />
+
+    <!-- ScrollView Section -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- ViewPager2 untuk Iklan -->
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPagerAds"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/input_background"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- News Header -->
+            <TextView
+                android:id="@+id/news_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:text="Berita Ter-update"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/viewPagerAds" />
+
+            <!-- News Section: ViewPager2 for News -->
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager2"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/input_background"
+                android:elevation="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/news_header" />
+
+            <!-- Location Section Header -->
+            <TextView
+                android:id="@+id/location_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:text="Ingin Mencari Lokasi Toko Pestisida?"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.141"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/viewPager2" />
+
+            <!-- Location Card 1 -->
+            <LinearLayout
+                android:id="@+id/location_card_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/input_background"
+                android:elevation="4dp"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/location_header">
+
+                <TextView
+                    android:id="@+id/location_text_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:text="@string/location_text_1"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/location_button_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#C3B298"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:text="Lokasi"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <!-- Location Card 2 -->
+            <LinearLayout
+                android:id="@+id/location_card_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/input_background"
+                android:elevation="4dp"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/location_card_1">
+
+                <TextView
+                    android:id="@+id/location_text_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/location_text_2"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/location_button_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#C3B298"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:text="Lokasi"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        app:itemIconTint="#4A7C59"
+        app:itemTextColor="#4A7C59"
+        app:menu="@menu/bottomnavigationview" />
+
+</LinearLayout>
